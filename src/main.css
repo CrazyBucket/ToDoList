@@ -1,0 +1,203 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+li {
+    list-style: none
+}
+.box {
+    width: 988px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 100px;
+    font-family: 'PingFang SC';
+    font-weight: 700;
+}
+.Header {
+    height: 50px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: absolute;
+    top: 250px;
+}
+.text {
+    font-size: 24px;
+    outline-style: none;
+    width: 780px;
+    padding: 12px 12px;
+    background: #FFFFFF;
+    border: 2px solid #5081FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: absolute;
+}
+.head {
+    margin-top: 30px;
+    display: inline-block;
+}
+.add {
+    background-color: white;
+    --color: #5081FF;
+    font-family: inherit;
+    display: inline-block;
+    width: 160px;
+    height: 56px;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: var(--color);
+    position: absolute;
+    left: 828px;
+}
+   
+.add:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+   
+.add:hover {
+    color: #fff;
+}
+   
+.add:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+   
+.add:hover:before {
+    top: -30px;
+    left: -30px;
+}
+   
+.add:active:before {
+    background: #2860F0;
+    transition: background 0s;
+}
+.item1 {
+    font-size: 20px;
+    margin-bottom: 35px;
+    position: relative;
+}
+.item2 {
+    font-size: 20px;
+    margin-bottom: 35px;
+    position: relative;
+    text-decoration: line-through;
+    color: #6D6D6D
+}
+.list {
+    position: absolute;
+    top: 345px;
+    left: 50px;
+    width: 858px;
+    height: 33px;
+    text-align: left;
+    text-indent: 10px;
+    background: #C2D3FF;
+    border-radius: 5px;
+    line-height: 33px;
+}
+li {
+    background: #C2D3FF;
+    border-radius: 5px;
+}
+.Del {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    background: #FA7171;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 48px;
+    height: 20px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+   }
+   .container {
+    top: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    display: inline-block;
+    margin-right: 10px;
+   } 
+   .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: white;
+    transition: all 0.3s;
+    border-radius: 5px;
+   }
+   .container input:checked ~ .checkmark {
+    background-color: #57BC7F;
+    animation: pop 0.5s;
+    animation-direction: alternate;
+   }
+   .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+   }
+   .container input:checked ~ .checkmark:after {
+    display: block;
+   }
+   .container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+   }
+   
+   @keyframes pop {
+    0% {
+     transform: scale(1);
+    }
+   
+    50% {
+     transform: scale(0.9);
+    }
+   
+    100% {
+     transform: scale(1);
+    }
+}
+.empty {
+    font-size: 20px;
+    color: #6D6D6D;
+}
