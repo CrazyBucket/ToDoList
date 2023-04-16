@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 import AnimatedCircle from "../AnimatedCircle";
-import styles from "./styles";
+import headerStyles from "./styles";
 
 const Header = () => {
   return (
@@ -14,16 +14,19 @@ const Header = () => {
         paddingTop: 120,
       }}
     >
-      <AnimatedCircle color="#D4CDFF94" size={200} />
-      <View style={{ paddingLeft: 200, paddingBottom: 50 }}>
-        <AnimatedCircle color="#C2FFF094" size={300} />
+      <View style={{ position: "absolute", width: 0, height: 0 }}>
+        <View style={{ paddingLeft: 100, marginTop: 50 }}>
+          <AnimatedCircle color="#D4CDFF94" size={200} />
+        </View>
+        <View style={{ paddingLeft: 200 }}>
+          <AnimatedCircle color="#C2FFF094" size={300} />
+        </View>
       </View>
       <View style={{ position: "relative" }}>
-        <Text style={styles.title}>
-          ToDoList<Text style={styles.bcTitle}>ToDoList</Text>
-        </Text>
-        <View style={styles.underLine}></View>
-        <Text style={styles.subTitle}>you have to do something</Text>
+        <Text style={headerStyles.title}>ToDoList</Text>
+        <Text style={headerStyles.bcTitle}>ToDoList</Text>
+        <View style={headerStyles.underLine}></View>
+        <Text style={headerStyles.subTitle}>you have to do something</Text>
       </View>
     </View>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import styles from "./styles";
 
 interface CardListProps {
@@ -9,12 +9,14 @@ interface CardListProps {
 
 const CardList = ({ items, isDone }: CardListProps) => {
   return (
-    <View>
-      {items.map((item, index) => (
-        <View key={index}>
-          <Text>{item}</Text>
-        </View>
-      ))}
+    <View style={[styles.container, { alignItems: "stretch" }]}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {items.map((item, index) => (
+          <View key={index} style={styles.listItem}>
+            <Text style={styles.listItemText}>{item}</Text>
+          </View>
+        ))}
+      </ScrollView>
     </View>
   );
 };

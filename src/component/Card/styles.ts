@@ -8,14 +8,14 @@ const cardStyles = StyleSheet.create({
     marginLeft: 15,
     marginRight: 15,
     marginBottom: 15,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 75,
-    },
-    shadowOpacity: 0.07,
-    shadowRadius: 229,
-    elevation: 5,
+    // minHeight: 400,
+    // shadowColor: "#000",
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 75,
+    // },
+    // shadowOpacity: 0.07,
+    // shadowRadius: 229,
   },
   switch: {
     marginTop: 22,

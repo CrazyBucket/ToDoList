@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+const headerStyles = StyleSheet.create({
   title: {
+    position: "relative",
     color: "#1F009C",
     fontWeight: "700",
     fontSize: 64,
@@ -34,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles;
+export default headerStyles;
