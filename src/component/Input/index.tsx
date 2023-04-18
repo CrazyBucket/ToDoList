@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import styles from "./styles";
+import useTodoStore from "../../store/todo";
 
 const Input = () => {
+  const [text, setText] = useState("");
+  const addTodo = useTodoStore(state => state.addTodo);
+  const handleAddTodo = () => {
+    if (text.trim() !== "") {
+      addTodo(text);
+      setText("");
+    }
+  };
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -14,6 +24,9 @@ const Input = () => {
           borderWidth: 0,
           borderColor: "transparent",
         }}
+        value={text}
+        onChangeText={setText}
+        onSubmitEditing={handleAddTodo}
       />
     </View>
   );

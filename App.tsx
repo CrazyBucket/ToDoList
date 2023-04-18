@@ -1,9 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Header from "./src/component/Header";
 import Input from "./src/component/Input";
 import Card from "./src/component/Card";
+// import Card from "@components/Card";
 
 export default function App() {
   return (
@@ -14,8 +15,10 @@ export default function App() {
       style={styles.container}
     >
       <StatusBar style="auto" />
-      <Header />
-      <Input />
+      <View style={{ overflow: "hidden" }}>
+        <Header />
+        <Input />
+      </View>
       <Card />
     </LinearGradient>
   );

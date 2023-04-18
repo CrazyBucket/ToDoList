@@ -14,7 +14,13 @@ const Header = () => {
         paddingTop: 120,
       }}
     >
-      <View style={{ position: "absolute", width: 0, height: 0 }}>
+      <View
+        style={{
+          position: "absolute",
+          width: 0,
+          height: 0,
+        }}
+      >
         <View style={{ paddingLeft: 100, marginTop: 50 }}>
           <AnimatedCircle color="#D4CDFF94" size={200} />
         </View>
