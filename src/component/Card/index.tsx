@@ -22,34 +22,26 @@ const renderScene = SceneMap({
 });
 
 const renderTabBar = (props: any) => (
-  <View
-    style={{
-      alignItems: "center",
-      justifyContent: "space-around",
-      flexDirection: "row",
+  <TabBar
+    {...props}
+    indicatorStyle={{
+      backgroundColor: "#B9D3F7",
+      height: 7,
+      width: 45,
+      marginLeft: 60,
     }}
-  >
-    <TabBar
-      {...props}
-      indicatorStyle={{
-        backgroundColor: "#B9D3F7",
-        height: 7,
-        width: 45,
-        marginLeft: 50,
-      }}
-      style={{
-        backgroundColor: "rgba(241, 238, 255, 0.55)",
-        borderWidth: 0,
-        shadowOpacity: 0,
-      }}
-      tabStyle={{ width: 145 }}
-      labelStyle={{
-        color: "#000",
-        height: 7,
-        marginBottom: -10,
-      }}
-    />
-  </View>
+    style={{
+      backgroundColor: "#e7eaf9",
+      borderWidth: 0,
+      shadowOpacity: 0,
+      elevation: 0,
+    }}
+    labelStyle={{
+      color: "#000",
+      marginBottom: -20,
+      zIndex: 10,
+    }}
+  />
 );
 
 const Card = () => {
@@ -59,15 +51,18 @@ const Card = () => {
     { key: "second", title: "Done" },
   ]);
   return (
-    <KeyboardAvoidingView style={cardStyles.container} behavior="padding">
-      <TabView
-        navigationState={{ index, routes }}
-        renderScene={renderScene}
-        renderTabBar={renderTabBar}
-        onIndexChange={setIndex}
-      ></TabView>
-    </KeyboardAvoidingView>
+    <View style={{ flex: 1, flexGrow: 1 }}>
+      <KeyboardAvoidingView style={cardStyles.container} behavior="height">
+        <TabView
+          navigationState={{ index, routes }}
+          renderScene={renderScene}
+          renderTabBar={renderTabBar}
+          onIndexChange={setIndex}
+        ></TabView>
+      </KeyboardAvoidingView>
+    </View>
   );
 };
+
 
 export default Card;
